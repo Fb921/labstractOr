@@ -1,0 +1,85 @@
+body{
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
+}
+header{
+    position:absolute;
+    background-color:transparent;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    padding: 5px 20px;
+    box-sizing:border-box;
+}
+.logo_container{
+    width:50px;
+    height:50px;
+    background-color:white;
+}
+.main_menu > ul{
+    display:flex;
+}
+.main_menu > ul > li{
+    padding:0 15px;
+    display:inline;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.fcp_container{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+.fcp-container_left-container{
+    width:60%;
+    overflow:hidden
+}
+
+.fcp-container_right-container{
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.fcp-container_right-container > p{
+    padding:0 50px 0 10px;
+    margin:50px 0 0 0;
+    font-size:20px;
+    line-height:30px;
+}
+.fcp-container_right-container > a{
+    padding:10px 20px;
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.178);
+    font-size:20px;
+    border-radius:5px;
+    margin:30px 0 0 0;
+    transition:transform 500ms;
+}
+:is(.fcp-container_right-container > a):hover{
+    background-color:rgba(136, 3, 3, 0.062);
+    transform:scale(1.1);
+}
+@keyframes slide_in_right{
+    0%{opacity:0;right:-150px;}
+    100%{opacity:1;right:30px;}
+}
+h1{
+    background-color:rgb(145, 0, 0);
+    color:white;
+    font-size:50px;
+    padding:10px 30px;
+    position:absolute;
+    width:50%;
+    right:30px;
+    top:30vh;
+    font-family: 'Playfair Display', serif;
+    animation-name:slide_in_right;
+    animation-duration:1s;
+}
